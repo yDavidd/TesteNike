@@ -1,0 +1,22 @@
+<section class="principal">
+  <div class="title">
+    <h1 style="color: white;">Popular <span style="color: #FF6452;">Products</span></h1>
+  <h2>The insole are Confortable so you can wear them everyday</h2>
+  </div>
+  
+    <section class="cards">
+      <div *ngFor="let product of products" class="card">
+        <div class="bandeira">
+          <img [src]="product.image_url" [alt]="product.name">
+          <div class="coracao">❤️</div>
+        </div>
+        <h1 class="jor">{{ product.name }}</h1>
+        <p>{{ product.description }}</p>
+        <div class="org">
+          <h1 style="color: white;">${{ product.price.toFixed(2) }}</h1>
+          <div class="btn">Add to Cart</div>
+        </div>
+      </div>
+  
+    </section>
+</section>
